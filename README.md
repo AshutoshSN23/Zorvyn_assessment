@@ -1,49 +1,120 @@
-FinTrack: 3D Pulse Dashboard
-A high-fidelity, interactive finance dashboard built for Zorvyn FinTech. This application demonstrates modern frontend architecture, responsive Glassmorphism design, and simulated Role-Based Access Control (RBAC).
+# 💰 FinTrack: 3D Pulse Dashboard
 
-🚀 Key Features
-3D Bento Grid UI: Uses deep shadows, mesh gradients, and Glassmorphism for a premium, tactile feel.
+> A high-fidelity, interactive finance dashboard built for the **Zorvyn FinTech Internship Assignment**.  
+> Designed with modern frontend practices, premium UI/UX, and scalable architecture.
 
-Role-Based UI (RBAC): Supports Admin and Viewer roles. Admins can record new transactions, while Viewers have read-only access.
+---
 
-Dynamic Analytics: Interactive line and pie charts providing spending breakdowns and balance trends.
+## 🌐 Live Demo
+🚀 _Add your deployed link here (Vercel/Netlify)_  
+👉 https://your-live-link.vercel.app
 
-Smart Insights: Automated logic to identify the highest spending category and total transaction counts.
+---
 
-Theme Engine: System-persistent Light and Dark modes with smooth transitions.
+## 📸 Preview
 
-Data Persistence: Full integration with localStorage to ensure data and theme preferences survive browser refreshes.
+![Dashboard Preview](https://via.placeholder.com/1000x500.png?text=Finance+Dashboard+Preview)
 
-🛠️ Tech Stack
-Framework: React (Vite)
+---
 
-Styling: Tailwind CSS v4 (Glassmorphism & 3D Effects)
+## 🚀 Key Features
 
-Icons: Lucide React
+### 🎨 3D Bento Grid UI
+- Modern **Glassmorphism design**
+- Soft shadows, gradients, and depth
+- Clean and premium dashboard layout
 
-Charts: Recharts
+### 🔐 Role-Based UI (RBAC Simulation)
+- **Admin Role** → Add transactions  
+- **Viewer Role** → Read-only access  
+- UI dynamically adapts based on role
 
-State Management: React Hooks (useState, useEffect, useMemo)
+### 📊 Dynamic Analytics
+- 📈 Line chart → Balance trends over time  
+- 🥧 Pie chart → Category-wise spending breakdown  
+- Interactive tooltips + legends
 
-🏗️ Technical Decisions
-Local-First Persistence: I chose localStorage for data handling to simulate a persistent user experience without the overhead of a dedicated backend for this assignment.
+### 🧠 Smart Insights
+- Detects **highest spending category**
+- Displays meaningful financial observations
 
-RBAC Simulation: Implemented a global role state that conditionally renders action-oriented components (like the "Add Transaction" modal), demonstrating secure UI patterns.
+### 🌗 Theme Engine (Optional Enhancement)
+- Light / Dark mode support  
+- Smooth transitions and persistence
 
-Performance: Utilized useMemo for heavy financial calculations (Total Balance, Income, Expenses) to prevent unnecessary re-renders during search and filter operations.
+### 💾 Data Persistence
+- Uses **localStorage**
+- Transactions & preferences saved across sessions
 
-Scalable Architecture: Components are modularized (Sidebar, SummaryCard, TransactionTable) to ensure the codebase is easy to maintain and extend.
+---
 
-🚦 Getting Started
-Clone the repository:
+## 🛠️ Tech Stack
 
-Bash
+| Category        | Technology |
+|----------------|-----------|
+| Framework      | React (Vite) |
+| Styling        | Tailwind CSS v4 |
+| Charts         | Recharts |
+| Icons          | Lucide React |
+| State Mgmt     | React Hooks |
+| Persistence    | localStorage |
+
+---
+
+## 🏗️ Architecture
+src/
+├── components/
+│ ├── SummaryCard.jsx
+│ ├── TransactionTable.jsx
+│ ├── Charts.jsx
+│ ├── Insights.jsx
+│ ├── AddTransactionModal.jsx
+│
+├── data/
+│ └── mockData.js
+│
+├── App.jsx
+└── main.jsx
+
+
+---
+
+## ⚙️ Technical Decisions & Trade-offs
+
+### 📌 Local-First Persistence
+- Used **localStorage** instead of backend
+- Simulates real-world persistence efficiently
+- Keeps scope aligned with frontend-focused assignment
+
+### 📌 RBAC Simulation
+- Global role state (`Admin` / `Viewer`)
+- Conditional rendering of actions
+- Demonstrates scalable UI security patterns
+
+### 📌 Performance Optimization
+- Used `useMemo` for:
+  - Balance calculations
+  - Income & expense aggregation
+- Prevents unnecessary re-renders
+
+### 📌 Scalable Component Design
+- Modular architecture:
+  - `Sidebar`
+  - `SummaryCard`
+  - `Charts`
+  - `Transactions`
+- Easy to extend and maintain
+
+---
+
+## 🚦 Getting Started
+
+### 1️⃣ Clone the repository
+```bash
 git clone https://github.com/AshutoshSN23/Zorvyn_assessment.git
-Install dependencies:
+cd Zorvyn_assessment
 
-Bash
+2️⃣ Install dependencies
 npm install
-Run the development server:
-
-Bash
+3️⃣ Run development server
 npm run dev
