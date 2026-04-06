@@ -1,16 +1,49 @@
-# React + Vite
+FinTrack: 3D Pulse Dashboard
+A high-fidelity, interactive finance dashboard built for Zorvyn FinTech. This application demonstrates modern frontend architecture, responsive Glassmorphism design, and simulated Role-Based Access Control (RBAC).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Key Features
+3D Bento Grid UI: Uses deep shadows, mesh gradients, and Glassmorphism for a premium, tactile feel.
 
-Currently, two official plugins are available:
+Role-Based UI (RBAC): Supports Admin and Viewer roles. Admins can record new transactions, while Viewers have read-only access.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Dynamic Analytics: Interactive line and pie charts providing spending breakdowns and balance trends.
 
-## React Compiler
+Smart Insights: Automated logic to identify the highest spending category and total transaction counts.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Theme Engine: System-persistent Light and Dark modes with smooth transitions.
 
-## Expanding the ESLint configuration
+Data Persistence: Full integration with localStorage to ensure data and theme preferences survive browser refreshes.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛠️ Tech Stack
+Framework: React (Vite)
+
+Styling: Tailwind CSS v4 (Glassmorphism & 3D Effects)
+
+Icons: Lucide React
+
+Charts: Recharts
+
+State Management: React Hooks (useState, useEffect, useMemo)
+
+🏗️ Technical Decisions
+Local-First Persistence: I chose localStorage for data handling to simulate a persistent user experience without the overhead of a dedicated backend for this assignment.
+
+RBAC Simulation: Implemented a global role state that conditionally renders action-oriented components (like the "Add Transaction" modal), demonstrating secure UI patterns.
+
+Performance: Utilized useMemo for heavy financial calculations (Total Balance, Income, Expenses) to prevent unnecessary re-renders during search and filter operations.
+
+Scalable Architecture: Components are modularized (Sidebar, SummaryCard, TransactionTable) to ensure the codebase is easy to maintain and extend.
+
+🚦 Getting Started
+Clone the repository:
+
+Bash
+git clone https://github.com/AshutoshSN23/Zorvyn_assessment.git
+Install dependencies:
+
+Bash
+npm install
+Run the development server:
+
+Bash
+npm run dev
